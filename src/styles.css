@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+:root {
+    --black: #2B283A;
+    /* headers, location, dates(700)*/
+    --red: #F55A5A;
+    /* nav_back, loc-icon, */
+    --gray: #918E9B;
+    /* p-text, (400)*/
+    --white: #FFFFFF;
+    --lightwhite: #F5F5F5;
+    --lighterwhite: #F5F7FB;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.nav {
+    background: var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+
+.nav--title {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 14.4608px;
+    line-height: 18px;
+    letter-spacing: -0.075em;
+}
+
+.container {
+    width: 70%;
+    margin: 20px auto;
+    max-width: 475px;
+}

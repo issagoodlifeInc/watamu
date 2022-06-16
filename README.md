@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+# Scrimba Travel Journal Project {Watamu, Kenya}
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This is a solution to the [Scrimba Travel Journal React Project Course on Scrimba](https://scrimba.com/learn/learnreact/react-section-3-solo-project).
+The course is offered for FREE on Scrimba by Bob Ziroll [Learn React](https://scrimba.com/learn/learnreact)(An amazing tutor -- really understood his course)
 
-In the project directory, you can run:
+I decided to show my travel experience in Watamu, Kenya. I visited this place after completing my 4th Year studies in Uni
 
-### `npm start`
+## Table of contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+- [Author](#author) -[Acknowledgments](#acknowledgments)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Overview
 
-### `npm test`
+### The challenge
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Use your own experience to create a travel journal
 
-### `npm run build`
+Requirements : -
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Build from Scratch!
+- Add data dynamically from `data.js` file that contains the:-
+  -Title, location, Google Maps link, sart date, end date, description, image URL
+- Use `map()` using `props`
+- Enjoy the build
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Screenshot
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Screenshot of My Watamu Mombasa Travel Journal
 
-### `npm run eject`
+![](./src/images/screenshot.jpg)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Links
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Solution URL: [GitHub Link](https://github.com/issagoodlifeInc/watamu.git)
+- Live Site URL: [Netlify Deploy](https://Watamu.netlify.app/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## My process
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+First worked on the NavBar and Main sections as per the [Figma model](<https://www.figma.com/file/hgjw0ocCdOAaixu4g2kbS4/Travel-Journal-(Copy)?node-id=2%3A2>) shared on Scrimba
+Then worked on the `Travel` by:- 1. Adding the `main` section on the `App` below the `<Navbar />` part 2. Adding the `<Travel />` part on the `App` by mapping through the data file
 
-## Learn More
+            ```js
+               function App() {
+                const myData = data.map(data => {
+                    return(
+                    <Travel
+                    key={data.id}
+                    {...data}
+                    />
+                    )
+                })
+                return (
+                    <div className="App">
+                    <Navbar />
+                    <main className="container">
+                    {myData}
+                    </main>
+                    </div>
+                );
+                }
+            ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+            3. Using `props` to display info from the `data` file in the `Travel` section
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+            ```js
+            <div className="travel-img">
+                <img src={props.imageUrl} alt="Unsplash Img" />
+            </div>
+            ```
 
-### Code Splitting
+            4.Styling out the `Travel` section and going through my archives to find travel destinations worth putting into the Journal
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+            5. Writing out this `README.md` file
 
-### Analyzing the Bundle Size
+### Built with
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- React
+- JSX syntax
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
 
-### Making a Progressive Web App
+### What I learned
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- Using `props` and `mapping` in React
 
-### Advanced Configuration
+```js
+const myData = data.map((data) => {
+  return <Travel key={data.id} {...data} />;
+});
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```js
+return (
+  <h4 className="travel-dates">
+    {props.startDate} - {props.endDate}
+  </h4>
+);
+```
 
-### Deployment
+- Inserting images by requiring the when in the src folder
+  Spent a whole load of time working on this finally it worked after snooping on solutions to this in the [#today-I-did](https://discord.com/channels/684009642984341525/919153471691849769/985538609430016000) channel in the Scrimba Discord Community
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```js
+const src = require(`../images/${props.imgUrl}`);
+```
 
-### `npm run build` fails to minify
+- Using Figma files to code
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React! React! React!
+
+### Continued development
+
+- Learning more React! (yeah reenacting React problems and tackling them)
+
+- Better turnaround time -- simple stuff but worked on it for a while
+
+- Less Code (code cleanup)
+
+## Author
+
+- Website - [Lesley Kimutai](https://leskim.github.io/myweb/)
+- Frontend Mentor - (https://www.frontendmentor.io/profile/Leskim)

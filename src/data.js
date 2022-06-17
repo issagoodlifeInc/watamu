@@ -1,5 +1,6 @@
 const data = [
     {
+        id: 1,
         title: "SGR Terminus Mombasa ",
         location: "Kenya",
         googleMapsUrl: "https://www.google.com/maps/place/Mombasa+SGR+Terminus/@-4.0216777,39.5770327,17z/data=!3m1!4b1!4m5!3m4!1s0x1840721a71a06723:0x99b51a0e1017e16f!8m2!3d-4.0216831!4d39.5792214",
@@ -9,6 +10,7 @@ const data = [
         imageUrl: "sgr.jpg"
     },
     {
+        id: 2,
         title: "Turtle Bay Resort",
         location: "Watamu",
         googleMapsUrl: "https://www.google.com/maps/place/Turtle+Bay+Beach+Resort+Watamu/@-3.3627688,40.0018842,17z/data=!3m1!4b1!4m8!3m7!1s0x181581c9baf81a97:0x98abf1e0a596fdd3!5m2!4m1!1i2!8m2!3d-3.3627742!4d40.0040729",
@@ -18,6 +20,7 @@ const data = [
         imageUrl: "turtlebay.jpg"
     },
     {
+        id: 3,
         title: "Vasco Da Gamma Pillar",
         location: "Malindi",
         googleMapsUrl: "https://www.google.com/maps/place/Vasco+da+Gama+Pillar/@-3.223625,40.1276701,17z/data=!3m1!4b1!4m5!3m4!1s0x18158fe9ff7ab31d:0xf8454c635ce9a508!8m2!3d-3.2236304!4d40.1298588",
@@ -27,6 +30,7 @@ const data = [
         imageUrl: "vascodagamma.jpg"
     },
     {
+        id: 4,
         title: "Crab Shack Dabaso",
         location: "Dabaso",
         googleMapsUrl: "https://www.google.com/maps/place/Crab+Shack+Dabaso,+Mida+Creek/@-3.3452492,39.9844632,17z/data=!3m1!4b1!4m5!3m4!1s0x1815807ba0b7981b:0xe46669b312d2dfdb!8m2!3d-3.3452546!4d39.9889479",
@@ -36,6 +40,7 @@ const data = [
         imageUrl: "crabshack.jpg"
     },
     {
+        id: 5,
         title: "Watamu Sunrise Villa",
         location: "Watamu",
         googleMapsUrl: "https://www.google.com/maps/place/Watamu+Sunrise+Villa/@-3.3428025,40.0304596,17.25z/data=!4m16!1m7!3m6!1s0x1815804ea287a975:0xe64095fb8f409740!2sWatamu!3b1!8m2!3d-3.3425465!4d40.0274159!3m7!1s0x1815811d48ff37ff:0xb8453135105734d4!5m2!4m1!1i2!8m2!3d-3.3426328!4d40.0346346",
@@ -45,6 +50,7 @@ const data = [
         imageUrl: "juavilla.jpg"
     },
     {
+        id: 6,
         title: "Papa Remo Beach",
         location: "Watamu",
         googleMapsUrl: "https://www.google.com/maps/place/Papa+Remo+Beach/@-3.3465641,40.0302801,17z/data=!3m1!4b1!4m5!3m4!1s0x181581ec83b8fd7f:0x2888e3143b277f2!8m2!3d-3.3465688!4d40.0324881",
@@ -54,6 +60,7 @@ const data = [
         imageUrl: "watamubeach.jpg"
     },
     {
+        id: 7,
         title: "Gede Ruins",
         location: "Gede",
         googleMapsUrl: "https://www.google.com/maps/place/Gede+Ruins+Malindi...+Snake+Park/@-3.3100148,40.0127186,17z/data=!4m12!1m6!3m5!1s0x181580d6ec9ae955:0x9ad1e7b3f93f7e55!2sGede+Ruins!8m2!3d-3.3100202!4d40.0172033!3m4!1s0x0:0xf08cb5c48c9fb927!8m2!3d-3.3097009!4d40.0164295",

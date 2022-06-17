@@ -124,6 +124,9 @@ hr {
 }
 
 @media (max-width: 674px) {
+    body {
+        background: var(--lighterwhite);
+    }
 
     .container,
     hr {
@@ -131,12 +134,14 @@ hr {
     }
 
     .travel-img {
+        /* position: relative; */
         max-width: 175px;
-        max-height: 250px;
+        max-height: 300px;
     }
 
     .travel--card {
         gap: 10px;
     }
+
 
 }

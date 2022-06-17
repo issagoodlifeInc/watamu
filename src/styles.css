@@ -127,7 +127,16 @@ hr {
 
     .container,
     hr {
-        width: 90%;
+        width: 95%;
+    }
+
+    .travel-img {
+        max-width: 175px;
+        max-height: 250px;
+    }
+
+    .travel--card {
+        gap: 10px;
     }
 
 }

@@ -49,47 +49,37 @@ Screenshot of My Watamu Mombasa Travel Journal
 First worked on the NavBar and Main sections as per the [Figma model](<https://www.figma.com/file/hgjw0ocCdOAaixu4g2kbS4/Travel-Journal-(Copy)?node-id=2%3A2>) shared on Scrimba
 Then worked on the `Travel` by:-
 
-        1. Adding the `main` section on the `App` below the `<Navbar />` part
+1. Adding the `main` section on the `App` below the `<Navbar />` part
 
-        2. Adding the `<Travel />` part on the `App` by mapping through the data file
+2. Adding the `<Travel />` part on the `App` by mapping through the data file
 
+```js
+function App() {
+  const myData = data.map((data) => {
+    return <Travel key={data.id} {...data} />;
+  });
+  return (
+    <div className="App">
+      <Navbar />
+      <main className="container">{myData}</main>
+    </div>
+  );
+}
+```
 
-            ```js
-              function App() {
-                const myData = data.map(data => {
-                    return(
-                    <Travel
-                    key={data.id}
-                    {...data}
-                    />
-                    )
-                })
-                return (
-                    <div className="App">
-                    <Navbar />
-                    <main className="container">
-                    {myData}
-                    </main>
-                    </div>
-                );
-                }
-            ```
+3. Using `props` to display info from the `data` file in the `Travel` section
 
-        3. Using `props` to display info from the `data` file in the `Travel` section
+```js
+<div className="travel-img">
+  <img src={props.imageUrl} alt="Unsplash Img" />
+</div>
+```
 
+4.Styling out the `Travel` section and going through my archives to find travel destinations worth putting into the Journal
 
-            ```js
-            <div className="travel-img">
-                <img src={props.imageUrl} alt="Unsplash Img" />
-            </div>
-            ```
+6. Adding data from my Coastal Kenya retreat that I took with my brother and friends at the end of May, 2022
 
-
-        4.Styling out the `Travel` section and going through my archives to find travel destinations worth putting into the Journal
-
-        6. Adding data from my Coastal Kenya retreat that I took with my brother and friends at the end of May, 2022
-
-        5. Writing out this `README.md` file
+7. Writing out this `README.md` file
 
 ### Built with
 
